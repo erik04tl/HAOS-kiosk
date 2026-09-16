@@ -6,7 +6,7 @@
 # Date: February 2026
 ################################################################################
 
-ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-debian:bookworm
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base:latest
 FROM $BUILD_FROM
 
 ARG BUILD_VERSION
