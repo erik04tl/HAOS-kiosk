@@ -6,11 +6,11 @@
 # Date: February 2026
 ################################################################################
 
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-debian:bookworm
 FROM $BUILD_FROM
 
 ARG BUILD_VERSION
-ENV ADDON_VERSION=${BUILD_VERSION}
+ARG BUILD_ARCH
 
 #===============================================================================
 ##### Install X, Browser and all necessary dependencies
