@@ -216,6 +216,8 @@ resolve_browser_binary() {
                 --touch-events=enabled
                 --enable-gpu-rasterization
                 --ignore-gpu-blocklist
+                --enable-features=VaapiVideoDecoder,VaapiIgnoreDriverChecks
+                --disable-features=UseChromeOSDirectVideoDecoder
                 --use-gl="$CHROMIUM_GL_MODE"
                 --use-angle="$CHROMIUM_ANGLE_BACKEND"
             )
