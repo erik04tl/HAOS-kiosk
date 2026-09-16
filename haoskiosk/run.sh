@@ -205,15 +205,10 @@ resolve_browser_binary() {
                 --disable-save-password-bubble
                 --disable-sync
                 --disable-search-engine-choice-screen
-                --disable-application-cache
-                --aggressive-cache-discard
                 --password-store=basic
                 --remote-debugging-address=127.0.0.1
                 --remote-debugging-port="$CHROMIUM_DEVTOOLS_PORT"
                 --user-data-dir="$CHROMIUM_PROFILE_DIR"
-                --disk-cache-dir=/tmp/haoskiosk-cache
-                --disk-cache-size=1
-                --media-cache-size=1
                 --window-position=0,0
                 --start-fullscreen
                 --kiosk
@@ -825,7 +820,7 @@ if [ "$DEBUG_MODE" != true ]; then
     if [ "$BROWSER_ENGINE" = "chromium" ]; then
         mkdir -p "$CHROMIUM_PROFILE_DIR"
         rm -f "$CHROMIUM_PROFILE_DIR"/Singleton*
-        clear_chromium_runtime_cache
+        # clear_chromium_runtime_cache
         seed_chromium_preferences
     fi
 
