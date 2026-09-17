@@ -12,7 +12,7 @@ FROM $BUILD_FROM
 ARG BUILD_VERSION
 ARG BUILD_ARCH
 
-ENV ADDON_VERSION=${BUILD_VERSION}
+ENV ADDON_VERSION="1.3.1-welizard.8"
 
 #===============================================================================
 ##### Install X, Browser and all necessary dependencies
