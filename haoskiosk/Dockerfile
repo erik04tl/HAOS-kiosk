@@ -12,6 +12,8 @@ FROM $BUILD_FROM
 ARG BUILD_VERSION
 ARG BUILD_ARCH
 
+ENV ADDON_VERSION=${BUILD_VERSION}
+
 #===============================================================================
 ##### Install X, Browser and all necessary dependencies
 RUN apk update && apk add --no-cache \
